@@ -16,6 +16,7 @@ class CasualSelfAttention(nn.Module):
         assert config.n_embd % config.n_head ==0
         self.c_attn = nn.Linear(config.n_embd, config.n_embd * 3)
         self.c_proj = nn.Linear(config.n_embd, config.n_embd)
+        self.c_proj.NANOGPT_SCALE_INIT = 1
         self.n_head=config.n_head
         self.n_embd = config.n_embd
 
@@ -37,7 +38,7 @@ class CasualSelfAttention(nn.Module):
 
         attn = (q @ k.transpose(-2, -1)) * (1.0 / math.sqrt(k.size(-1)))
 
-        attn = attn.masked_fill(self.bias[:, :, T, :T] ==0, float('-inf'))
+        attn = attn.masked_fill(self.bias[:, :, :T, :T] ==0, float('-inf'))
         attn = F.softmax(attn, dim=-1)
         y = (attn @ v).transpose(1, 2).contiguous().view(B, T, C)
         y= self.c_proj(y)
@@ -92,6 +93,21 @@ class GPT(nn.Module):
             ln_f = nn.LayerNorm(config.n_embd),
         ))
         self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
+
+        self.transformer.wte.weight= self.lm_head.weight
+
+        self.apply(self._init_weights)
+
+    def _init_weights(self, module):
+        if isinstance(module, nn.Linear):
+            std = 0.02
+            if hasattr(module, 'NANOGPT_SCALE_INIT'):
+                std *= (2 * self.config.n_layer) ** -0.5
+            torch.nn.init.normal_(module.weight, mean=0.0, std=std)
+            if module.bias is not None:
+                torch.nn.init.zeros_(module.bias)
+        elif isinstance(module, nn.Embedding):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
     
     def forward(self, idx, targets=None):
@@ -199,6 +215,7 @@ class DataLoaderLite:
 
 
 #-------------------------------------------------------
+import time
 device = "cpu"
 if torch.cuda.is_available():
     device = "cuda"
@@ -207,7 +224,7 @@ elif hasattr(torch.backends,"mps") and torch.backends.mps.is_available():
 
 print(f"Using device: {device}")
 
-
+torch.manual_seed(1337)
 
 train_loader = DataLoaderLite(B=4, T=32)
 
@@ -216,13 +233,16 @@ model.to(device)
 # logits,loss= model(x,y)
 optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4)
 for i in range(50):
+    t0 = time.time()
     optimizer.zero_grad()
     x, y = train_loader.next_batch()
     x,y= x.to(device) , y.to(device)
     logits, loss = model(x,y)
     loss.backward()
     optimizer.step()
-    print(f"iter {i}, loss: {loss.item()}")
+    t1 = time.time()
+    dt = (t1 - t0)*1000
+    print(f"iter {i}, loss: {loss.item()}, dt: {dt:.2f}ms")
 
 
 

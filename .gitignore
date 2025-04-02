@@ -1,0 +1,3 @@
+dataset/all_with_filtered_anotations_since1998.txt
+checkpoints/
+*.pt

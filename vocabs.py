@@ -6,7 +6,7 @@ if __name__ == "__main__":
     vocab_counter = set()
 
     with open(f"dataset/processed_kaggle2.txt", "w", encoding="utf-8") as outf:
-        with open("/Users/layakishorereddy/Desktop/projects/Gpt-2-dlkr/dataset/all_with_filtered_anotations_since1998 copy.txt", "r", encoding="utf-8") as inpf:
+        with open("/Users/layakishorereddy/Desktop/projects/Gpt-2-dlkr/dataset/all_with_filtered_anotations_since1998.txt", "r", encoding="utf-8") as inpf:
             for line in inpf:
                 try:
                     ostr = line.split("###")[1].strip()

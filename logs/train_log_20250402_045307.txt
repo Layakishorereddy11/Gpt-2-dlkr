@@ -1,0 +1,37 @@
+[2025-04-02 04:53:07] Checkpointing enabled.
+[2025-04-02 04:53:07] Using device: mps
+[2025-04-02 04:53:37] step    0 | loss: 9.251351 | lr: 6.0000e-05 | norm: 15.0163 | dt: 29361.53ms | tok/sec: 8928.15
+[2025-04-02 04:53:38] Validation loss at step 0: 8.247269
+[2025-04-02 04:53:38] New best model saved at checkpoints/run_20250402_045307/best/model_step_0.pt
+[2025-04-02 04:53:40] Sample responses at step 0:
+[2025-04-02 04:53:40] e4 e5 Qag7+ R2xc3+ Nfxd2+ Q5f7# R7d5 Rcxc1 Rbxh2# Ncxe3 bxc8=Q# R8xc3+ Rbxb1+ Qdxb2# Nhg4+ cxd4+ Ndxc8 Rfe4+ R3e5
+[2025-04-02 04:53:40] e4 e5 Qbxc7+ Q5g3# Rgc6 fxg1=R+ Rgb6+ dxc6+ fxe1=B+ bxa1=Q Ndf7# Qaf1# Qgxe5+ Qdb2 Reb5 Rfc4 Qfd8+ Qdb2 Q1b7+
+[2025-04-02 04:53:40] Saved checkpoint at checkpoints/run_20250402_045307/regular/model_step_0.pt
+[2025-04-02 04:54:09] step    1 | loss: 8.384414 | lr: 1.2000e-04 | norm: 9.7773 | dt: 28862.86ms | tok/sec: 9082.40
+[2025-04-02 04:54:10] Validation loss at step 1: 7.708239
+[2025-04-02 04:54:10] New best model saved at checkpoints/run_20250402_045307/best/model_step_1.pt
+[2025-04-02 04:54:10] Sample responses at step 1:
+[2025-04-02 04:54:10] e4 e5 N2g3 Ncd8 N5g6+ Rgxc2+ Rfxe1+ Rdxb8 Q5xc5# Qff4 Nxd6 axb5# Q6d4+ Nc6# R8xg2# Rhe2 Rxb5
+[2025-04-02 04:54:10] e4 e5 R6a5 R4d2# Nc6# R4g5 c8=N N4xe5+ Rhd6 R6a5 Nexg5+ Rcd6+ Qgd5# R8d3# Nd7# R5a6 Ndxb8 R1xc7+ R3c7
+[2025-04-02 04:54:11] Saved checkpoint at checkpoints/run_20250402_045307/regular/model_step_1.pt
+[2025-04-02 04:54:39] step    2 | loss: 7.718180 | lr: 1.8000e-04 | norm: 7.5953 | dt: 28072.56ms | tok/sec: 9338.09
+[2025-04-02 04:54:39] Validation loss at step 2: 7.161909
+[2025-04-02 04:54:39] New best model saved at checkpoints/run_20250402_045307/best/model_step_2.pt
+[2025-04-02 04:54:40] Sample responses at step 2:
+[2025-04-02 04:54:40] e4 e5 Bxg5# Raxh4+ bxa8=N c6 Rhc7 Rfxe1+ Qaxa2+ Rcxe8+ Ref6# fxg1=N+ Qxe8#
+[2025-04-02 04:54:40] e4 e5 R6a5 c5 Nfxd2+ Reb5 dxe2+ Qxd8# Bxf6 R4a3+ Qaxb5+ Reb5 R4xf2 Ree3+ N3xa4+
+[2025-04-02 04:54:40] Saved checkpoint at checkpoints/run_20250402_045307/regular/model_step_2.pt
+[2025-04-02 04:55:08] step    3 | loss: 7.312088 | lr: 2.4000e-04 | norm: 6.7911 | dt: 27935.19ms | tok/sec: 9384.01
+[2025-04-02 04:55:08] Validation loss at step 3: 6.884406
+[2025-04-02 04:55:09] New best model saved at checkpoints/run_20250402_045307/best/model_step_3.pt
+[2025-04-02 04:55:09] Sample responses at step 3:
+[2025-04-02 04:55:09] e4 e5 R2e4+ Nf4+ Rexg3 Ngxe4 Rfd3 Nf6 Nc3 Bxc3+ Raxe6# a6 Rdxb7+ Ndxc3+ cxb6 Ree3+ Bxa1 Rexc2+
+[2025-04-02 04:55:09] e4 e5 d4 Rdxg6 Qe4# O-O hxg1=N+ c6 Qxa4 R6c7 Ng6# Q2d5+ Bxb7# Rd2# Qdd5+ Ncd8+ Nf6 Rdxg4 N3xa4+
+[2025-04-02 04:55:10] Saved checkpoint at checkpoints/run_20250402_045307/regular/model_step_3.pt
+[2025-04-02 04:55:38] step    4 | loss: 7.099720 | lr: 3.0000e-04 | norm: 6.5633 | dt: 28052.38ms | tok/sec: 9344.80
+[2025-04-02 04:55:38] Validation loss at step 4: 7.048710
+[2025-04-02 04:55:38] Sample responses at step 4:
+[2025-04-02 04:55:38] e4 e5 Qee8 exd8=N+ Qce4+ Qfa1 Bxg5# Nf6 d4 d4 N7xb5 Nb1 Ngxe4 Raxc2 N1xg2 O-O R2a3 Raxd5 Naxc5+
+[2025-04-02 04:55:38] e4 e5 d4 Bxc3+ Qxf1# Nc3 R2e4+ Rxa8 Kxh7 Qed2 Rc8 Ng6# Qbc7# d4 R2a3 e4 Q8e5 Nf6
+[2025-04-02 04:55:39] Saved checkpoint at checkpoints/run_20250402_045307/regular/model_step_4.pt
+[2025-04-02 04:55:39] Final model saved at checkpoints/run_20250402_045307/final/model_step_4.pt

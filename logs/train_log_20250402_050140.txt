@@ -1,0 +1,17 @@
+[2025-04-02 05:01:40] Checkpointing enabled.
+[2025-04-02 05:01:40] Using device: mps
+[2025-04-02 05:02:08] step    0 | loss: 9.251351 | lr: 6.0000e-05 | norm: 15.0163 | dt: 28128.82ms | tok/sec: 9319.41
+[2025-04-02 05:02:09] Validation loss at step 0: 8.247269
+[2025-04-02 05:02:09] New best model saved at checkpoints/run_20250402_050140/best/model_step_0.pt
+[2025-04-02 05:02:11] Sample responses at step 0:
+[2025-04-02 05:02:11] e4 e5 Qag7+ R2xc3+ Nfxd2+ Q5f7# R7d5 Rcxc1 Rbxh2# Ncxe3 bxc8=Q# R8xc3+ Rbxb1+ Qdxb2# Nhg4+ cxd4+ Ndxc8 Rfe4+ R3e5
+[2025-04-02 05:02:11] e4 e5 Qbxc7+ Q5g3# Rgc6 fxg1=R+ Rgb6+ dxc6+ fxe1=B+ bxa1=Q Ndf7# Qaf1# Qgxe5+ Qdb2 Reb5 Rfc4 Qfd8+ Qdb2 Q1b7+
+[2025-04-02 05:02:11] Saved checkpoint at checkpoints/run_20250402_050140/regular/model_step_0.pt
+[2025-04-02 05:02:40] step    1 | loss: 8.384414 | lr: 1.2000e-04 | norm: 9.7773 | dt: 28327.84ms | tok/sec: 9253.94
+[2025-04-02 05:02:40] Validation loss at step 1: 7.708239
+[2025-04-02 05:02:41] New best model saved at checkpoints/run_20250402_050140/best/model_step_1.pt
+[2025-04-02 05:02:41] Sample responses at step 1:
+[2025-04-02 05:02:41] e4 e5 N2g3 Ncd8 N5g6+ Rgxc2+ Rfxe1+ Rdxb8 Q5xc5# Qff4 Nxd6 axb5# Q6d4+ Nc6# R8xg2# Rhe2 Rxb5
+[2025-04-02 05:02:41] e4 e5 R6a5 R4d2# Nc6# R4g5 c8=N N4xe5+ Rhd6 R6a5 Nexg5+ Rcd6+ Qgd5# R8d3# Nd7# R5a6 Ndxb8 R1xc7+ R3c7
+[2025-04-02 05:02:41] Saved checkpoint at checkpoints/run_20250402_050140/regular/model_step_1.pt
+[2025-04-02 05:02:42] Final model saved at checkpoints/run_20250402_050140/final/model_step_1.pt
